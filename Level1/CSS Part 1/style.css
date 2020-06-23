@@ -1,0 +1,122 @@
+/*h1 is my selector: h1 element */
+@import url('https://fonts.googleapis.com/css?family=Cairo|Inconsolata');
+body{
+	font-family: 'Cairo', sans-serif;
+}
+h1 {
+	/*
+		Css Syntax
+		Property: background-color, color, font-size 
+		: Colon
+		; Semicolon
+		value --> rgb(192, 195, 197)
+		{ --> Curly Brackets
+	*/
+	background-color: rgb(192, 195, 197); /* RGB */
+	color: #af2f0a; /* HEX Color */
+	padding: 12px;
+	border: 12px dashed red;
+	/* margin: 25px 10px; */
+	padding-top: 50px;
+	padding-bottom: 65px;
+	margin-left: 150px;
+	/* margin: 50%; */
+	text-align: center;
+	border-right-width: 20px;
+	border-right-style: solid;
+	border-bottom-width: 5px;
+	border-bottom-style: dotted;
+	border-bottom-color: blue;
+	border-left: none;
+	border-top: 10px dashed #62431b;
+}
+section div, section, section p { color: white }
+p { 
+	color: darkgreen;
+}	
+/* Section */
+section {
+	background-color: #cbcbda;
+}
+section div p {
+	background-image: url("1.jpg");
+    background-repeat: no-repeat;
+	background-position: center left;
+
+}
+section div div p{
+	background-image: url("1.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed; /*Default value : scroll */
+	background-position: top;
+}
+/*
+When using the shorthand property the order of the property values is:
+
+	background-color
+	background-image
+	background-repeat
+	background-attachment
+	background-position
+	
+	Note: if any value not written, it takes the default value.
+*/
+section div div p {
+	background: #ffffff url("1.jpg") no-repeat fixed top left;
+}
+
+.div1 {
+	/* width: auto; */
+    /* height: auto; */
+    background-color: black;
+    color: wheat;
+    padding: 15px;
+    border-radius: 10px;
+    margin-left: 23px;
+    max-width: 300px;
+    max-height: 71px;
+    overflow: scroll;
+	
+}
+button, a {
+	background-color: #72d672;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    width: auto;
+    border: none;
+    border-radius: 10px;
+    outline-color: black;
+    outline-style: dashed;
+    outline-width: 10px;
+    margin: auto 40% 109px;
+    /* outline: none; */
+    outline-offset: 60px;
+	
+}
+.div1 a {
+	text-decoration:none; /* removes bottom line of a link */
+	
+}
+.div2 {
+	margin-top: 100px;
+	text-align: right; 
+}
+.span2 {
+	text-decoration: underline;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: black;
+    color: wheat;
+    letter-spacing: 3px;
+	text-shadow:2px 1px 2px #af9c9c; /*x y blur color*/
+    font-family: "Times New Roman", Times, serif;
+	font-family: cursive;
+    font-style: italic;
+    font-weight: bolder;
+    font-variant: small-caps;
+
+
+}
+
+	
