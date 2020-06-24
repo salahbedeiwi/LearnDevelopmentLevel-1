@@ -1,0 +1,243 @@
+a {text-decoration:none;background-color: #b6bfd0; padding:10px; border-radius:5px}
+button {
+	background-color: #b6bfd0; 
+	border: none;
+	border-radius:5px;
+	padding:10px;
+    outline: none;
+}
+* {
+  box-sizing: border-box;
+}
+.clear {clear:both}
+.mt10 {margin-top: 10px;}
+/*add my own image instead of disc type */
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+ul li {
+    list-style-position: inside;
+	list-style-image : url("sqpurple.gif");
+	text-align: center;
+}
+/* unvisited link */
+a:link , button:link {
+  color: red;
+  background-color: black;
+
+}
+
+/* visited link */
+a:visited , button:visited {
+  color: green;
+  background-color: aquamarine;
+}
+
+/* mouse over link */
+a:hover , button:hover {
+  color: hotpink;
+  background-color: bisque;
+}
+
+/* selected link */
+a:active , button:active {
+  color: white;
+  background-color: black;
+}
+h1 {margin-top: 85px;}
+/*list*/
+ol li {
+	list-style-type: arabic-indic;
+}
+.nav {
+  background-color: yellow;
+list-style-type: none;
+text-align: center;
+margin: 0;
+padding: 0;
+z-index: 151
+}
+.nav li {
+  display: inline-block;
+  font-size: 20px;
+  padding: 20px;
+  
+}
+.nav li a:link {
+  color: green;
+  background-color: aquamarine;
+}
+.nav li a:visited, .nav li a:hover {
+  color: aquamarine;
+  background-color: green;
+}
+.nav li a:active {
+  color: #e8ebea;
+	background-color: #2c8c2c;
+}
+nav {
+	margin-bottom: 15px;
+	position: sticky;
+	top: 0
+}
+
+table {
+	width: 100%;
+	color: white;
+	text-align: left;
+	border-collapse: collapse;
+}
+table td, table th {
+	border: 1px solid #dddddd;
+	padding: 10px;
+}
+table tr:nth-child(even) {
+	background-color: #2f2b2b;
+}
+
+table tr:nth-child(odd) {
+	background-color: #5f5858;
+}
+table tr {
+	height: 50px;
+    vertical-align: bottom;
+}
+table tr:hover {
+	background-color: #f5f4f4;
+    cursor: pointer;
+    color: #16943d;
+}
+table th {
+	background-color: darkgreen;
+}
+.staticPosition {
+	position: static;
+	border: 3px solid #73AD21;
+}
+
+.relativePosition {
+	position: relative;
+	border: 3px solid #73AD21;
+	
+}
+.relativeExample {
+	background-color: black;
+    color: wheat;
+    padding: 15px;
+    width: 45%;
+    margin: 5px 26%;
+    border: 9px solid #841111;
+    border-radius: 11px;
+	
+}
+.relativeExample p {
+	margin-bottom: 0;
+}
+.relativeExample span {
+	position: relative;
+    bottom: 33px;
+    left: 394px;
+    border: 2px solid;
+    padding: 10px;
+    border-radius: 50%;
+}
+.fixedExample {
+	  position: fixed;
+	  bottom: 0;
+	  right: 0;
+	  width: 300px;
+	  border: 3px solid #73AD21;
+}
+.relativeAndAbsoluteExample {
+	position: relative;
+}
+.relativeAndAbsoluteExample span {
+	position: absolute;
+    top: 0;
+    left: 178px;
+    color: red;
+    text-decoration: underline;
+}
+.relAbsEx2 {
+	position: relative;
+	padding: 15px;
+	background-color: black;
+    min-height: 75px;
+}
+.relAbsEx2 span:nth-child(1) {
+	position: absolute;
+    color: white;
+    top: 0;
+	left: 0;
+		padding:15px
+}
+.relAbsEx2 span:nth-child(2) {
+	position: absolute;
+    color: white;
+    right: 0;
+	top: 0;
+		padding:15px
+}
+.relAbsEx2 span:nth-child(3) {
+	position: absolute;
+    color: white;
+    bottom: 0;
+	left: 0;
+		padding:15px
+}
+.relAbsEx2 span:nth-child(4) {
+	position: absolute;
+    color: white;
+    bottom: 0;
+	right: 0;
+	padding:15px
+}
+.relAbsEx2 p {
+	color: antiquewhite;
+    text-align: center;
+}
+.relAbsEx3 {
+  
+  position: sticky;
+  top: 0;
+  background-color: green;
+  border: 2px solid #4CAF50;
+  z-index: 150;
+  color: white;
+  text-align: center;
+  padding-top: 16px;
+  border: 3px solid white;
+}
+.overFlowEx {
+	width: 230px;
+    height: 72px;
+    background-color: #eee;
+    overflow: scroll;
+}
+.floatEx {
+	
+}
+.floatEx img {
+  float: right;
+  width: 200px;
+  height: 200px;
+}
+.floatEx2 {clear:both}
+.floatEx2 button {margin-top: 20px;}
+.floatEx2 button:nth-child(1) {
+	float: right;
+}
+.floatEx2 button:nth-child(2) {float: left;}
+.img-container {
+  float: left;
+  width: 30.33%;
+  padding: 5px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
