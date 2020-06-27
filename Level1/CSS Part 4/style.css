@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+* {
+	box-sizing:border-box;
+}
+body {
+	font-weight: bold;
+	--main-bg-color: coral; /*Custom CSS Variable */
+	font-family: 'Cairo', sans-serif;
+}
+/*Custom CSS Variable */
+:root {
+	--main-animation-size-50:  50px;
+	--main-animation-size-100:  100px;
+	--main-heading-color: red
+}
+/* Animation Name */
+@keyframes changeBgColors1 {
+	  0%   { background-color:var(--main-heading-color); left:0px; top:0px;}
+	  25%  {background-color:yellow; left:var(--main-animation-size-50); top:0px;}
+	  50%  {background-color:blue; left:var(--main-animation-size-50); top:var(--main-animation-size-50);}
+	  75%  {background-color:green; left:0px; top:100vh;}
+	  100% {background-color:var(--main-heading-color); left:0px; top:0px;}
+}
+@keyframes changeBgColors2 {
+	  0%   { background-color:var(--main-heading-color); left:0px; top:0px;}
+	  25%  {background-color:yellow; left:var(--main-animation-size-100); top:0px;}
+	  50%  {background-color:blue; left:var(--main-animation-size-100); top:var(--main-animation-size-100);}
+	  75%  {background-color:green; left:0px; top:var(--main-animation-size-100);}
+	  100% {background-color:var(--main-heading-color); left:0px; top:0px;}
+}
+
+.circleStyle1 {
+	background-color: var(--main-heading-color); /*Call Custom CSS Variable */
+    text-align: center;
+    width: 100px;
+    padding: 40px;
+    border-radius: 50%;
+    height: 100px;
+	position: relative;
+	animation-name: changeBgColors1;
+	animation-duration: 4s; 
+	animation-delay: -3s;
+
+}
+.circleStyle2 {
+	background-color: var(--main-heading-color);
+    margin: auto 49%;
+    text-align: center;
+    width: 100px;
+    padding: 40px;
+    border-radius: 50%;
+    height: 100px;
+	position: relative;
+	animation-name: changeBgColors2;
+	animation-duration: 8s;
+	animation-iteration-count : 2; /* Can't accept negative value*/
+	animation-direction: reverse;
+	animation-timing-function: linear ;
+}
+.tooltip {
+	position: relative;
+	
+	width: 120px;
+    text-decoration: underline;
+}
+.tooltiptext {
+	display: none;
+	position: absolute;
+    left: 8px;
+    top: 26px;
+    background-color: black;
+    color: wheat;
+    padding: 11px;
+    border-radius: 10px;
+}
+.tooltip:hover .tooltiptext {display: block;}
+.tooltiptext::after {
+	  content: "";
+	  position: absolute;
+	  bottom: 100%;
+	  left: 50%;
+	  margin-left: -5px;
+	  border-width: 5px;
+	  border-style: solid;
+	  border-color: transparent transparent black transparent;
+}
+.myDiv {
+	content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent var(--main-heading-color);
+}
+.two {
+	float: left;
+	width: 50%;
+}
+@media only screen and (min-height: 500px) {
+  body {
+    color:green;
+  }
+  .two {
+	width: 100%;
+}
+}
+@media print and (min-width: 480px) {
+  body {
+    display:none;
+  }
+}
