@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JavaScript Part 2 - Salah Bedeiwi</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<div>
+			<!-- 
+				Fire an event,
+				Invoke to function name
+				Call function name
+			-->
+			<span onclick="getFirstName()">First Name: </span>
+				<span id="fName"></span><br>
+			<span>Last Name: </span>
+				<span id="lName"></span><br>
+			<span>Your age: </span>
+				<span id="age"></span><br>
+		</div>
+		<div>Name is <span id="yourName0"></span></div>
+		<div>Name is <span id="yourName1"></span></div>
+		<div>Name is <span id="yourName2"></span></div>
+		<div>F to C Temperature <span id="demo"></span></div>
+		<div>F to C Temperature <span id="demo1"></span></div>
+		<div>My Favorite Fruit is <span id="favFruit"></span></div>
+		<div>Random Num <span id="randNum"></span></div>
+		<hr>
+		<hr>
+		<hr>
+		<div>Car Info <br>
+			<span id="carName"></span><br>
+			<span id="carType"></span><br>
+			<span id="carPrice"></span><br>
+			<span id="carSpeed"></span><br>
+			<span id="carColor"></span><br>
+			<span id="carOilChange"></span><br>
+			<span id="carFeatures"></span><br>
+		</div>
+		<input type="text" id="myText" onkeydown="getTextVal('myText', 'showText')"/> 
+		<p id="showText"></p> 
+		<button onclick="getTextVal('myText', 'showText')">Click</button>
+		<!-- Call My JS -->
+		<script src="script.js"></script>
+	</body>
+</html>
