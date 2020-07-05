@@ -1,0 +1,9 @@
+* {
+	box-sizing:border-box;
+}
+.myStyle {
+	color:darkblue;
+	list-style-type: none
+}
+.myStyle li:nth-child(even) { color:green }
+.bold {font-weight: bolder; font-family: italic;}
