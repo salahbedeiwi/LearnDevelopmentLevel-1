@@ -1,0 +1,254 @@
+/*
+	Author: 	Salah Bedeiwi
+	Version: 	1.0.0
+	Date:		July 7, 2020
+	Purpose:	This is used as a practice 
+					where contents doesn't mean anything
+*/
+@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+* {
+	box-sizing:border-box;
+	margin: 0;
+	padding: 0;
+}
+:root {
+	--main-color: #2b198f;
+	--main-padding: 15px;
+	--text-center: center;
+	--text-left: left;
+	--main-shadow: 2px 2px 7px #eee;
+	--text-right: right;
+}
+body {
+	color: var(--main-color);
+}
+.center {
+	text-align: var(--text-center);
+}
+/*Generic Keyframes */
+@keyframes mainHeader {
+	0%		{left: -1000px}
+	100%	{left: 0}
+}
+@keyframes mainImageFrame {
+	0%		{top: 100vh;}
+	100%	{top: 0;}
+}
+/* Main Nav Bar */
+nav {
+	position: fixed;
+	background-color: #fffcfc;
+	min-height: 44px;
+	z-index: 100;
+	top:0;
+	width:100%;
+}
+nav ul {
+	display: flex;
+	list-style-type: none;
+	text-align: center;
+	margin: auto 42%;
+}
+nav ul li {
+	padding: 10px;
+	width: 100px;
+}
+nav ul li a {
+	text-decoration: none;
+	padding: 10px;
+	color: #3b57ac;
+}
+nav ul li.active a {
+	font-weight: bold;
+	border-bottom: 2px solid #020307;
+	color: #020307;
+}
+nav ul li:not(.active) a:hover {
+	border-bottom: 2px solid #020307;
+	transition: 0.5s;
+}
+nav ul li a:link, nav ul li a:visited {}
+nav ul li a:hover, nav ul li a:active {
+	color: #020307;
+}
+/* Main slide image */
+.mainImage {
+	position: relative;	
+	animation-name: mainImageFrame;
+	animation-duration: 2s;
+	animation-delay: -1s;
+	animation-timing-function: linear;
+}
+.mainImage img {
+	width: 100%;
+}
+.mainImage h1 {
+	position: absolute;
+	margin: auto 40%;
+	width: 20%;
+	top: 150px;
+	color: whitesmoke;
+	background-color: #0c276787;
+	padding: 10px;
+	box-shadow: 2px 2px 7px #f5f5f5e0;
+	text-align: center;
+	animation-name: mainHeader;
+	animation-duration: 2s;
+	animation-delay: -1s;
+	animation-timing-function: linear;
+}
+/* Main Work Example section */
+.serviceTitle {
+	margin: 10px 0;
+}
+.serviceTitle:before {
+	content: "⛱ ";
+	color: lightseagreen;
+}
+.serviceTitle:after {
+	content: " ⛱";
+	color: lightseagreen;
+}
+.mainWorkExample {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 50px;
+}
+.mainWorkExample .services {
+	box-shadow: 2px 2px 7px #eee;
+	width: 250px;
+	margin: auto 15px;
+}
+.services:hover {
+	background-color: #f0f8ff47;
+    transition: 0.8s;
+    box-shadow: 2px 2px 7px #cbc0c0;
+}
+.mainWorkExample img {
+	width: 250px;
+	height: 180px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+.services h3 { text-align: center }
+.service1 h3{ color: #18913e; }
+.service2 h3{ color: #e6960b; }
+.service3 h3 { color: #302ea8; }
+.serviceOptions {
+	padding: 10px 0 0 10px;
+	margin-bottom: 13px;
+}
+.serviceOptions  ul{
+	list-style-type: none;
+}
+.serviceOptions ul li:nth-child(even){ color: darkblue;}/*li number 2,4 */
+.serviceOptions ul li:nth-child(odd){ color: darkgreen;} /*li number 1,3 */
+.serviceOptions ul li:nth-child(4){ font-weight: bold;} /*last li is bold */
+.service1 .serviceOptions ul li:before {
+	content: "⛱";
+	color: #18913e;
+}
+.service2 .serviceOptions ul li:before {
+	content: "⛱";
+	color: #b47736;
+}
+.service3 .serviceOptions ul li:before {
+	content: "⛱";
+	color: #302ea8;
+}
+
+.readMore {
+	text-align: var(--text-right);
+    padding: 0 9px 0 14px;
+    margin-bottom: 20px;
+}
+.readMore a:link, .readMore a:visited,
+.readMore a:hover, .readMore a:active {
+	text-decoration:none;
+	outline: none;
+	padding: 10px;
+}
+.btn {
+	border-radius: 5px;
+	box-shadow: 2px 2px 7px #10305269;
+}
+.btn-regular {
+	background-color: #18913e;
+	color: white;
+}
+.btn-regular:hover {
+	background-color: #137933;
+	transition: 0.3s;
+	box-shadow: 2px 2px 7px #b47736;
+}
+.btn-hot {
+	background-color: #b47736;
+	color: white;
+}
+.btn-hot:hover {
+	background-color: #b26719;
+	transition: 0.3s;
+	box-shadow: 2px 2px 7px #302ea8;
+}
+.btn-deluxe {
+	background-color: #302ea8;
+	color: white;
+}
+.btn-deluxe:hover {
+	background-color: #25238b;
+	transition: 0.3s;
+	box-shadow: 2px 2px 7px #b47736;
+}
+/* Customer Rating */
+.lastCustomerRating, .customerSide {
+	display:flex;
+	justify-content: center;
+	align-items:center;
+}
+.lastCustomerRating {
+	box-shadow: var(--main-shadow);
+	background-color: aliceblue;
+	padding: 10px;
+	margin-bottom: 50px;
+}
+.customerSide img {
+	width:100px;
+	height:100px;
+	border-radius: 50%;
+	padding:5px;
+	background-color: white;
+	border: 1px solid #2b198f;
+}
+.aboutCustomer {
+	display: flex;
+	flex-direction: column;
+}
+.customerName {
+    font-size: 2em;
+    font-weight: bold;
+    padding-left: 10px;
+    color: darkblue;
+}
+.ratingDate {
+	text-align:center;
+	padding-top:14px;
+	font-size: small;
+	font-style: italic;
+	color: #a89e9e;
+}
+.customerOpinion {
+	padding: 42px 0 0 31px;
+}
+/* My Footer */
+.mainFooter {
+	color: white;
+	background-color: black;
+	padding: 10px;
+	text-align: center;
+}
+.mainFooter a:link, .mainFooter a:visited,
+.mainFooter a:hover,.mainFooter a:active {
+	text-decoration:none;
+	color: wheat;
+}
